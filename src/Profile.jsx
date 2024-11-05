@@ -1,7 +1,8 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import DefaultProfile from "./DefaultProfile";
 import Spinach from "./Spinach";
 import Popeye from "./Popeye";
+import Bluto from './Bluto';
 
 const Profile = () => {
   const { name } = useParams();
@@ -16,9 +17,19 @@ const Profile = () => {
         <Popeye />
       ) : name === "spinach" ? (
         <Spinach />
+      ) : name === "bluto" ? (
+        <Bluto />
       ) : (
         <DefaultProfile />
       )}
+      <ul>
+        <li>
+          <Link to="/profile/popeye">Popeye</Link></li>
+        <li>
+          <Link to="/profile/spinach">Spinach</Link></li>
+        <li>
+          <Link to="/profile/bluto">Bluto</Link></li>
+      </ul>
     </div>
   );
 };

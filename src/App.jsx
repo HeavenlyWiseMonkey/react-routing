@@ -14,6 +14,9 @@ const App = () => {
           <li>
             <Link to="profile">Profile page</Link>
           </li>
+          <li>
+            <Link to="imageGallery">Image gallery</Link>
+          </li>
         </ul>
       </nav>
     </div>
